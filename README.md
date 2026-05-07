@@ -412,6 +412,8 @@ Because the sample data includes campaign-name mismatches, some downstream analy
 
 Because the sample workbook intentionally includes inconsistent campaign names, the analytics layer includes `EXAMPLE.ANALYTICS.UNMAPPED_PAID_MEDIA_CAMPAIGNS` to surface paid media campaigns that do not yet have a governed mapping in `DIM_CAMPAIGN_MAP`.
 
+The linked Google Sheet is a public, view-only sample workbook containing synthetic data for demonstration purposes.
+
 The workbook includes examples such as:
 
 - Multiple tabs
