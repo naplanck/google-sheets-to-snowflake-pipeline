@@ -1,5 +1,6 @@
 # google-sheets-to-snowflake-pipeline
 ![CI](https://github.com/naplanck/google-sheets-to-snowflake-pipeline/actions/workflows/ci.yml/badge.svg)
+
 A production-style data ingestion pipeline that extracts messy, manually maintained Google Sheets data, validates and normalizes it through JSON-based schema rules, and loads it into Snowflake using a transactional staging-table pattern.
 
 This project is designed around a common real-world data engineering problem: business teams often maintain operational data in spreadsheets, but analytics platforms require stable schemas, clean typing, repeatable loads, and clear lineage.
@@ -27,6 +28,13 @@ The pipeline:
 - Loads data into Snowflake through a temporary staging table
 - Uses explicit target-column inserts instead of `SELECT *`
 - Logs pipeline progress and failures to CloudWatch when deployed on AWS Lambda
+
+---
+
+## Proof of Run
+
+A successful Lambda execution and Snowflake validation outputs are documented in
+[`docs/proof-of-run/proof-of-run.md`](docs/proof-of-run/proof-of-run.md).
 
 ---
 
