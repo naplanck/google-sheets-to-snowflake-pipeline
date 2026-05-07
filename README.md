@@ -79,7 +79,25 @@ This project addresses those issues by treating the pipeline configuration as th
 ├── pytest.ini
 ├── .gitignore
 ├── docs/
-│   └── Arch_Diagram.png
+│   ├── Arch_Diagram.png
+│   └── proof-of-run/
+│       ├── proof-of-run.md
+│       ├── lambda-test-success.png
+│       ├── cloudwatch-log-events.csv
+│       ├── queries.sql
+│       └── query-results/
+│           ├── 01_raw_layer_row_counts.csv
+│           ├── 02_source_sheet_lineage.csv
+│           ├── 03_raw_to_stg_row_count_comparison.csv
+│           ├── 04_stg_paid_media_cleanup_sample.csv
+│           ├── 05_stg_leads_aggregate.csv
+│           ├── 06_monthly_budget_unpivot_sample.csv
+│           ├── 07_paid_media_quality_issues.csv
+│           ├── 08_monthly_budget_quality_issues.csv
+│           ├── 09_analytics_object_row_counts.csv
+│           ├── 10_client_monthly_funnel_mart.csv
+│           ├── 11_spend_vs_budget_mart.csv
+│           └── 12_campaign_mapping_sample.csv
 ├── examples/
 │   ├── transform_rules.json
 │   └── example_messy_google_sheets_inputs_expanded.xlsx
