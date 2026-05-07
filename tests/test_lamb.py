@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import base64
 import copy
-import io
 from datetime import date
 from types import SimpleNamespace
 from unittest.mock import Mock
@@ -168,14 +167,15 @@ def test_load_transform_rules_from_s3_reads_json_from_s3(monkeypatch):
     assert fake_s3.calls == [{"Bucket": "rules-bucket", "Key": "rules.json"}]
 
 
-
 def test_load_transform_rules_from_s3_wraps_s3_errors(monkeypatch):
     fake_s3 = FakeS3Client(error=RuntimeError("s3 down"))
 
     monkeypatch.setenv("TRANSFORM_RULES_BUCKET", "rules-bucket")
     monkeypatch.setattr(app.boto3, "client", lambda service_name: fake_s3)
 
-    with pytest.raises(RuntimeError, match="Failed to load transformation file from s3"):
+    with pytest.raises(
+        RuntimeError, match="Failed to load transformation file from s3"
+    ):
         app.load_transform_rules_from_s3("rules.json")
 
 
@@ -187,9 +187,7 @@ def test_load_transform_rules_from_s3_wraps_s3_errors(monkeypatch):
 def test_read_secret_json_reads_secret_string():
     sm = FakeSecretsClient(
         responses={
-            "my-secret": {
-                "SecretString": '{"User": "svc_user", "Pass": "secret"}'
-            }
+            "my-secret": {"SecretString": '{"User": "svc_user", "Pass": "secret"}'}
         }
     )
 
@@ -199,21 +197,13 @@ def test_read_secret_json_reads_secret_string():
     assert sm.calls == ["my-secret"]
 
 
-
 def test_read_secret_json_reads_secret_binary():
     encoded = base64.b64encode(b'{"key": "value"}')
-    sm = FakeSecretsClient(
-        responses={
-            "binary-secret": {
-                "SecretBinary": encoded
-            }
-        }
-    )
+    sm = FakeSecretsClient(responses={"binary-secret": {"SecretBinary": encoded}})
 
     result = app.read_secret_json(sm, "binary-secret")
 
     assert result == {"key": "value"}
-
 
 
 def test_read_secret_json_wraps_errors():
@@ -221,7 +211,6 @@ def test_read_secret_json_wraps_errors():
 
     with pytest.raises(RuntimeError, match="Failed to get Secret"):
         app.read_secret_json(sm, "missing-secret")
-
 
 
 def test_get_secrets_fetches_google_and_snowflake_secrets(monkeypatch):
@@ -297,7 +286,6 @@ def test_get_sheet_values_with_retry_returns_values_on_first_try():
     assert worksheet.calls == 1
 
 
-
 def test_get_sheet_values_with_retry_retries_transient_errors(monkeypatch):
     monkeypatch.setattr(app, "APIError", FakeAPIError)
     monkeypatch.setattr(app.time, "sleep", Mock())
@@ -325,8 +313,9 @@ def test_get_sheet_values_with_retry_retries_transient_errors(monkeypatch):
     app.time.sleep.assert_any_call(2)
 
 
-
-def test_get_sheet_values_with_retry_does_not_retry_non_transient_api_errors(monkeypatch):
+def test_get_sheet_values_with_retry_does_not_retry_non_transient_api_errors(
+    monkeypatch,
+):
     monkeypatch.setattr(app, "APIError", FakeAPIError)
     monkeypatch.setattr(app.time, "sleep", Mock())
 
@@ -337,7 +326,6 @@ def test_get_sheet_values_with_retry_does_not_retry_non_transient_api_errors(mon
 
     assert worksheet.calls == 1
     app.time.sleep.assert_not_called()
-
 
 
 def test_get_sheet_values_with_retry_raises_after_max_attempts(monkeypatch):
@@ -358,7 +346,6 @@ def test_get_sheet_values_with_retry_raises_after_max_attempts(monkeypatch):
 
     assert worksheet.calls == 3
     assert app.time.sleep.call_count == 2
-
 
 
 def test_get_sheet_values_with_retry_reraises_non_api_errors():
@@ -390,7 +377,6 @@ def test_sheet_values_to_dataframe_uses_configured_header_and_removes_empty_rows
     assert df.iloc[1]["Amount"] == "20"
 
 
-
 def test_sheet_values_to_dataframe_respects_column_start():
     values = [
         ["junk"],
@@ -403,7 +389,6 @@ def test_sheet_values_to_dataframe_respects_column_start():
     assert list(df.columns) == ["Name", "Amount"]
     assert df.iloc[0]["Name"] == "Alice"
     assert df.iloc[0]["Amount"] == "10"
-
 
 
 def test_sheet_values_to_dataframe_pads_short_rows_to_widest_row():
@@ -419,7 +404,6 @@ def test_sheet_values_to_dataframe_pads_short_rows_to_widest_row():
     assert list(df.columns) == ["Name", "Amount", "Status"]
     assert df.iloc[0]["Status"] == ""
     assert df.iloc[1]["Status"] == "Live"
-
 
 
 def test_sheet_values_to_dataframe_header_past_data_raises_error():
@@ -443,7 +427,6 @@ def test_parse_date_value_blank_or_na_returns_none(value):
     assert app.parse_date_value(value) is None
 
 
-
 def test_parse_date_value_invalid_returns_none():
     assert app.parse_date_value("not a real date") is None
 
@@ -454,16 +437,18 @@ def test_parse_date_value_invalid_returns_none():
 
 
 def test_parse_numeric_series_float_handles_currency_commas_percent_and_negatives():
-    series = pd.Series([
-        "$1,234.50",
-        "(500)",
-        "-75",
-        "42-",
-        "25%",
-        "n/a",
-        "TBD",
-        "",
-    ])
+    series = pd.Series(
+        [
+            "$1,234.50",
+            "(500)",
+            "-75",
+            "42-",
+            "25%",
+            "n/a",
+            "TBD",
+            "",
+        ]
+    )
 
     result = app.parse_numeric_series(series, "FLOAT")
 
@@ -478,7 +463,6 @@ def test_parse_numeric_series_float_handles_currency_commas_percent_and_negative
     assert pd.isna(result.iloc[7])
 
 
-
 def test_parse_numeric_series_int_uses_nullable_integer_dtype():
     series = pd.Series(["1", "2", "", "(3)"])
 
@@ -490,13 +474,11 @@ def test_parse_numeric_series_int_uses_nullable_integer_dtype():
     assert result.iloc[3] == -3
 
 
-
 def test_parse_numeric_series_invalid_numbers_become_missing():
     result = app.parse_numeric_series(pd.Series(["abc", "$not-a-number"]), "FLOAT")
 
     assert pd.isna(result.iloc[0])
     assert pd.isna(result.iloc[1])
-
 
 
 def test_parse_numeric_series_unsupported_type_raises_error():
@@ -510,13 +492,15 @@ def test_parse_numeric_series_unsupported_type_raises_error():
 
 
 def test_align_df_renames_filters_optional_columns_and_converts_types():
-    df = pd.DataFrame({
-        "Launch Date": ["01/15/2026"],
-        "Spend": ["($1,234.50)"],
-        "Clicks": ["100"],
-        "Status": ["Live"],
-        "Ignored Column": ["should not survive"],
-    })
+    df = pd.DataFrame(
+        {
+            "Launch Date": ["01/15/2026"],
+            "Spend": ["($1,234.50)"],
+            "Clicks": ["100"],
+            "Status": ["Live"],
+            "Ignored Column": ["should not survive"],
+        }
+    )
 
     rules = {
         "Launch Date": {"NAME": "LAUNCH_DATE", "TYPE": "DATE"},
@@ -542,7 +526,6 @@ def test_align_df_renames_filters_optional_columns_and_converts_types():
     assert result.iloc[0]["STATUS"] == "Live"
 
 
-
 def test_align_df_missing_required_column_raises_error():
     df = pd.DataFrame({"Spend": ["100"]})
     rules = {
@@ -554,7 +537,6 @@ def test_align_df_missing_required_column_raises_error():
         app.align_to_target_schema(df, rules)
 
 
-
 def test_align_df_duplicate_source_columns_raises_error():
     df = pd.DataFrame(
         [["01/15/2026", "01/16/2026"]],
@@ -564,7 +546,6 @@ def test_align_df_duplicate_source_columns_raises_error():
 
     with pytest.raises(ValueError, match="Duplicate columns found"):
         app.align_to_target_schema(df, rules)
-
 
 
 def test_align_df_unsupported_column_type_raises_error():
@@ -585,11 +566,9 @@ def test_get_private_key_der_requires_private_key():
         app.get_private_key_der({"Private_Key_Passphrase": "password"})
 
 
-
 def test_get_private_key_der_requires_passphrase():
     with pytest.raises(ValueError, match="Missing Private_Key_Passphrase"):
         app.get_private_key_der({"Private_Key": "fake-key"})
-
 
 
 def test_get_private_key_der_returns_der_for_encrypted_pem():
@@ -604,14 +583,15 @@ def test_get_private_key_der_returns_der_for_encrypted_pem():
         encryption_algorithm=serialization.BestAvailableEncryption(password),
     ).decode("utf-8")
 
-    result = app.get_private_key_der({
-        "Private_Key": encrypted_pem,
-        "Private_Key_Passphrase": password.decode("utf-8"),
-    })
+    result = app.get_private_key_der(
+        {
+            "Private_Key": encrypted_pem,
+            "Private_Key_Passphrase": password.decode("utf-8"),
+        }
+    )
 
     assert isinstance(result, bytes)
     assert len(result) > 0
-
 
 
 def test_connect_sf_uses_key_pair_auth(monkeypatch):
@@ -652,11 +632,12 @@ def test_validate_sql_identifier_accepts_valid_identifier():
     assert app.validate_sql_identifier("VALID_NAME_123") == "VALID_NAME_123"
 
 
-@pytest.mark.parametrize("identifier", ["1BAD", "bad-name", "bad name", "bad.name", "", "bad;DROP"])
+@pytest.mark.parametrize(
+    "identifier", ["1BAD", "bad-name", "bad name", "bad.name", "", "bad;DROP"]
+)
 def test_validate_sql_identifier_rejects_invalid_identifier(identifier):
     with pytest.raises(ValueError):
         app.validate_sql_identifier(identifier)
-
 
 
 def test_validate_sql_identifier_rejects_non_string():
@@ -673,11 +654,9 @@ def test_validate_transform_rules_accepts_valid_config():
     app.validate_transform_rules(valid_transform_rules())
 
 
-
 def test_validate_transform_rules_rejects_non_dict_config():
     with pytest.raises(TypeError, match="Transformation rules must be a dictionary"):
         app.validate_transform_rules([])
-
 
 
 def test_validate_transform_rules_rejects_invalid_table_name():
@@ -688,14 +667,12 @@ def test_validate_transform_rules_rejects_invalid_table_name():
         app.validate_transform_rules(rules)
 
 
-
 def test_validate_transform_rules_rejects_invalid_db_name():
     rules = valid_transform_rules()
     rules["LEADS_RAW"]["DB"] = "BAD-DB"
 
     with pytest.raises(ValueError, match="Invalid LEADS_RAW.DB"):
         app.validate_transform_rules(rules)
-
 
 
 def test_validate_transform_rules_rejects_invalid_schema_name():
@@ -706,7 +683,6 @@ def test_validate_transform_rules_rejects_invalid_schema_name():
         app.validate_transform_rules(rules)
 
 
-
 def test_validate_transform_rules_rejects_invalid_t_cols_name():
     rules = valid_transform_rules()
     rules["LEADS_RAW"]["T_COLS"].append("BAD-COL")
@@ -715,14 +691,12 @@ def test_validate_transform_rules_rejects_invalid_t_cols_name():
         app.validate_transform_rules(rules)
 
 
-
 def test_validate_transform_rules_rejects_invalid_mapped_target_column_name():
     rules = valid_transform_rules()
     rules["LEADS_RAW"]["SHEETS"][0]["COLS"]["Spend"]["NAME"] = "BAD-COL"
 
     with pytest.raises(ValueError, match="Invalid LEADS_RAW.Spend.NAME"):
         app.validate_transform_rules(rules)
-
 
 
 def test_validate_transform_rules_rejects_duplicate_target_columns():
@@ -734,14 +708,12 @@ def test_validate_transform_rules_rejects_duplicate_target_columns():
         app.validate_transform_rules(rules)
 
 
-
 def test_validate_transform_rules_rejects_mapped_column_missing_from_t_cols():
     rules = valid_transform_rules()
     rules["LEADS_RAW"]["T_COLS"].remove("SPEND")
 
     with pytest.raises(ValueError, match="Mapped columns missing"):
         app.validate_transform_rules(rules)
-
 
 
 def test_validate_transform_rules_rejects_empty_sheets():
@@ -759,18 +731,24 @@ def test_validate_transform_rules_rejects_empty_sheets():
 
 def test_lambda_handler_happy_path_replaces_target_table(monkeypatch):
     rules = valid_transform_rules()
-    worksheet = FakeWorksheet(values=[
-        ["junk title row"],
-        ["Launch Date", "Spend", "Clicks"],
-        ["01/15/2026", "$1,234.50", "100"],
-        ["01/16/2026", "(500)", "25"],
-    ])
+    worksheet = FakeWorksheet(
+        values=[
+            ["junk title row"],
+            ["Launch Date", "Spend", "Clicks"],
+            ["01/15/2026", "$1,234.50", "100"],
+            ["01/16/2026", "(500)", "25"],
+        ]
+    )
     fake_gsheet_client = FakeGSheetClient(worksheet)
     fake_cursor = FakeCursor()
     fake_conn = FakeConnection(fake_cursor)
 
-    monkeypatch.setattr(app, "load_transform_rules_from_s3", Mock(return_value=copy.deepcopy(rules)))
-    monkeypatch.setattr(app, "get_secrets", Mock(return_value={"GSheet": {"g": "s"}, "SF": {"s": "f"}}))
+    monkeypatch.setattr(
+        app, "load_transform_rules_from_s3", Mock(return_value=copy.deepcopy(rules))
+    )
+    monkeypatch.setattr(
+        app, "get_secrets", Mock(return_value={"GSheet": {"g": "s"}, "SF": {"s": "f"}})
+    )
     monkeypatch.setattr(app, "connect_gsheet", Mock(return_value=fake_gsheet_client))
     monkeypatch.setattr(app, "connect_sf", Mock(return_value=fake_conn))
     monkeypatch.setattr(app.uuid, "uuid4", lambda: SimpleNamespace(hex="abcdef123456"))
@@ -797,7 +775,9 @@ def test_lambda_handler_happy_path_replaces_target_table(monkeypatch):
     app.connect_gsheet.assert_called_once_with({"g": "s"})
     app.connect_sf.assert_called_once_with({"s": "f"}, rules["LEADS_RAW"])
 
-    assert fake_gsheet_client.opened_urls == ["https://docs.google.com/spreadsheets/d/example"]
+    assert fake_gsheet_client.opened_urls == [
+        "https://docs.google.com/spreadsheets/d/example"
+    ]
     assert fake_gsheet_client._spreadsheet.requested_sheets == ["Campaign Tracker"]
 
     assert captured["conn"] is fake_conn
@@ -818,32 +798,38 @@ def test_lambda_handler_happy_path_replaces_target_table(monkeypatch):
     assert fake_conn.closed is True
 
 
-
 def test_lambda_handler_respects_skip_delete(monkeypatch):
     rules = valid_transform_rules()
     rules["LEADS_RAW"]["SKIP_DELETE"] = True
 
-    worksheet = FakeWorksheet(values=[
-        ["junk title row"],
-        ["Launch Date", "Spend", "Clicks"],
-        ["01/15/2026", "100", "10"],
-    ])
+    worksheet = FakeWorksheet(
+        values=[
+            ["junk title row"],
+            ["Launch Date", "Spend", "Clicks"],
+            ["01/15/2026", "100", "10"],
+        ]
+    )
     fake_gsheet_client = FakeGSheetClient(worksheet)
     fake_cursor = FakeCursor()
     fake_conn = FakeConnection(fake_cursor)
 
-    monkeypatch.setattr(app, "load_transform_rules_from_s3", Mock(return_value=copy.deepcopy(rules)))
+    monkeypatch.setattr(
+        app, "load_transform_rules_from_s3", Mock(return_value=copy.deepcopy(rules))
+    )
     monkeypatch.setattr(app, "get_secrets", Mock(return_value={"GSheet": {}, "SF": {}}))
     monkeypatch.setattr(app, "connect_gsheet", Mock(return_value=fake_gsheet_client))
     monkeypatch.setattr(app, "connect_sf", Mock(return_value=fake_conn))
     monkeypatch.setattr(app.uuid, "uuid4", lambda: SimpleNamespace(hex="abcdef123456"))
-    monkeypatch.setattr(app, "write_pandas", lambda conn, df, table_name, database, schema: (True, 1, len(df), []))
+    monkeypatch.setattr(
+        app,
+        "write_pandas",
+        lambda conn, df, table_name, database, schema: (True, 1, len(df), []),
+    )
 
     app.lambda_handler({"File": "rules.json"}, context=None)
 
     assert not any(sql.startswith("DELETE FROM") for sql in fake_cursor.statements)
     assert any(sql.startswith("INSERT INTO") for sql in fake_cursor.statements)
-
 
 
 def test_lambda_handler_wraps_invalid_transform_rules(monkeypatch):
@@ -853,17 +839,20 @@ def test_lambda_handler_wraps_invalid_transform_rules(monkeypatch):
         app.lambda_handler({"File": "rules.json"}, context=None)
 
 
-
 def test_lambda_handler_raises_when_sheet_fetch_or_transform_fails(monkeypatch):
     rules = valid_transform_rules()
-    worksheet = FakeWorksheet(values=[
-        ["junk title row"],
-        ["Wrong Column"],
-        ["some value"],
-    ])
+    worksheet = FakeWorksheet(
+        values=[
+            ["junk title row"],
+            ["Wrong Column"],
+            ["some value"],
+        ]
+    )
     fake_gsheet_client = FakeGSheetClient(worksheet)
 
-    monkeypatch.setattr(app, "load_transform_rules_from_s3", Mock(return_value=copy.deepcopy(rules)))
+    monkeypatch.setattr(
+        app, "load_transform_rules_from_s3", Mock(return_value=copy.deepcopy(rules))
+    )
     monkeypatch.setattr(app, "get_secrets", Mock(return_value={"GSheet": {}, "SF": {}}))
     monkeypatch.setattr(app, "connect_gsheet", Mock(return_value=fake_gsheet_client))
 
@@ -871,24 +860,31 @@ def test_lambda_handler_raises_when_sheet_fetch_or_transform_fails(monkeypatch):
         app.lambda_handler({"File": "rules.json"}, context=None)
 
 
-
 def test_lambda_handler_raises_when_write_pandas_row_count_mismatch(monkeypatch):
     rules = valid_transform_rules()
-    worksheet = FakeWorksheet(values=[
-        ["junk title row"],
-        ["Launch Date", "Spend", "Clicks"],
-        ["01/15/2026", "100", "10"],
-    ])
+    worksheet = FakeWorksheet(
+        values=[
+            ["junk title row"],
+            ["Launch Date", "Spend", "Clicks"],
+            ["01/15/2026", "100", "10"],
+        ]
+    )
     fake_gsheet_client = FakeGSheetClient(worksheet)
     fake_cursor = FakeCursor()
     fake_conn = FakeConnection(fake_cursor)
 
-    monkeypatch.setattr(app, "load_transform_rules_from_s3", Mock(return_value=copy.deepcopy(rules)))
+    monkeypatch.setattr(
+        app, "load_transform_rules_from_s3", Mock(return_value=copy.deepcopy(rules))
+    )
     monkeypatch.setattr(app, "get_secrets", Mock(return_value={"GSheet": {}, "SF": {}}))
     monkeypatch.setattr(app, "connect_gsheet", Mock(return_value=fake_gsheet_client))
     monkeypatch.setattr(app, "connect_sf", Mock(return_value=fake_conn))
     monkeypatch.setattr(app.uuid, "uuid4", lambda: SimpleNamespace(hex="abcdef123456"))
-    monkeypatch.setattr(app, "write_pandas", lambda conn, df, table_name, database, schema: (True, 1, 0, []))
+    monkeypatch.setattr(
+        app,
+        "write_pandas",
+        lambda conn, df, table_name, database, schema: (True, 1, 0, []),
+    )
 
     with pytest.raises(RuntimeError, match="Tables failed to load"):
         app.lambda_handler({"File": "rules.json"}, context=None)
@@ -899,24 +895,33 @@ def test_lambda_handler_raises_when_write_pandas_row_count_mismatch(monkeypatch)
     assert fake_conn.closed is True
 
 
-
-def test_lambda_handler_rolls_back_when_insert_fails_after_transaction_starts(monkeypatch):
+def test_lambda_handler_rolls_back_when_insert_fails_after_transaction_starts(
+    monkeypatch,
+):
     rules = valid_transform_rules()
-    worksheet = FakeWorksheet(values=[
-        ["junk title row"],
-        ["Launch Date", "Spend", "Clicks"],
-        ["01/15/2026", "100", "10"],
-    ])
+    worksheet = FakeWorksheet(
+        values=[
+            ["junk title row"],
+            ["Launch Date", "Spend", "Clicks"],
+            ["01/15/2026", "100", "10"],
+        ]
+    )
     fake_gsheet_client = FakeGSheetClient(worksheet)
     fake_cursor = FakeCursor(fail_on_sql_start="INSERT INTO")
     fake_conn = FakeConnection(fake_cursor)
 
-    monkeypatch.setattr(app, "load_transform_rules_from_s3", Mock(return_value=copy.deepcopy(rules)))
+    monkeypatch.setattr(
+        app, "load_transform_rules_from_s3", Mock(return_value=copy.deepcopy(rules))
+    )
     monkeypatch.setattr(app, "get_secrets", Mock(return_value={"GSheet": {}, "SF": {}}))
     monkeypatch.setattr(app, "connect_gsheet", Mock(return_value=fake_gsheet_client))
     monkeypatch.setattr(app, "connect_sf", Mock(return_value=fake_conn))
     monkeypatch.setattr(app.uuid, "uuid4", lambda: SimpleNamespace(hex="abcdef123456"))
-    monkeypatch.setattr(app, "write_pandas", lambda conn, df, table_name, database, schema: (True, 1, len(df), []))
+    monkeypatch.setattr(
+        app,
+        "write_pandas",
+        lambda conn, df, table_name, database, schema: (True, 1, len(df), []),
+    )
 
     with pytest.raises(RuntimeError, match="Tables failed to load"):
         app.lambda_handler({"File": "rules.json"}, context=None)
