@@ -332,7 +332,7 @@ def align_to_target_schema(df, rules):
 
     # Convert types
     logger.info("Converting Column Types")
-    for config in rules.items():
+    for config in rules.values():
         new_col = config["NAME"]
         col_type = config["TYPE"]
 
