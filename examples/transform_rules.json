@@ -1,0 +1,132 @@
+{
+    "CAMPAIGN_TRACKER_RAW":{
+	"DB":"EXAMPLE",
+	"SCHEMA":"RAW",
+	"SKIP_DELETE": false,
+	"T_COLS":["LAUNCH_DATE","END_DATE","NAMING_CONVENTION","PLATFORM","STATUS","OWNER","PRIORITY","NOTES", "DATASOURCE", "DATASOURCE_SHEET", "LOAD_DATE"],
+        "SHEETS":[
+            {
+                "LINK":"https://docs.google.com/spreadsheets/d/1vqaH-AAwUbBmAphs8XFjeUScpvbNHbGckpItfMQ_UyE/edit?usp=sharing",
+                "SHEET":"Campaign Tracker - Acme",
+                "HEADER_ROW":"4",
+		"COLUMN_START": "1",
+		"COLS": {
+			"Launch Date": {"NAME": "LAUNCH_DATE", "TYPE": "DATE", "REQUIRED": true},
+			"End Date": {"NAME": "END_DATE", "TYPE": "DATE", "REQUIRED": true},
+			"Naming Convention": {"NAME": "NAMING_CONVENTION", "TYPE": "VARCHAR", "REQUIRED": true},
+			"Platform": {"NAME": "PLATFORM", "TYPE": "VARCHAR", "REQUIRED": true},
+			"Status": {"NAME": "STATUS", "TYPE": "VARCHAR", "REQUIRED": true},
+			"Owner": {"NAME": "OWNER", "TYPE": "VARCHAR", "REQUIRED": true},
+			"QA Notes": {"NAME": "NOTES", "TYPE": "VARCHAR", "REQUIRED": true}
+		}
+            },
+            {
+                "LINK":"https://docs.google.com/spreadsheets/d/1vqaH-AAwUbBmAphs8XFjeUScpvbNHbGckpItfMQ_UyE/edit?usp=sharing",
+                "SHEET":"Campaign Tracker - Beacon",
+                "HEADER_ROW":"5",
+		"COLUMN_START": "1",
+		"COLS": {
+			"Launch Date": {"NAME": "LAUNCH_DATE", "TYPE": "DATE", "REQUIRED": true},
+			"End Date": {"NAME": "END_DATE", "TYPE": "DATE", "REQUIRED": true},
+			"Naming Convention": {"NAME": "NAMING_CONVENTION", "TYPE": "VARCHAR", "REQUIRED": true},
+			"Platform": {"NAME": "PLATFORM", "TYPE": "VARCHAR", "REQUIRED": true},
+			"Status": {"NAME": "STATUS", "TYPE": "VARCHAR", "REQUIRED": true},
+			"Owner": {"NAME": "OWNER", "TYPE": "VARCHAR", "REQUIRED": true},
+			"Priority": {"NAME": "PRIORITY", "TYPE": "VARCHAR", "REQUIRED": true},
+			"QA Notes": {"NAME": "NOTES", "TYPE": "VARCHAR", "REQUIRED": true}
+		}
+            }
+        ]
+    },
+
+	"LEADS_RAW":{
+		"DB":"EXAMPLE",
+		"SCHEMA":"RAW",
+		"SKIP_DELETE": false,
+		"T_COLS":["LEAD_DATE","CLIENT","FIRST_NAME","LAST_NAME","EMAIL","PHONE","SOURCE","SOURCE2","QUALIFIED","REVENUE_ESTIMATE","ADDRESS", "DATASOURCE", "DATASOURCE_SHEET", "LOAD_DATE"],
+		"SHEETS":[
+			{
+				"LINK": "https://docs.google.com/spreadsheets/d/1vqaH-AAwUbBmAphs8XFjeUScpvbNHbGckpItfMQ_UyE/edit?gid=478926885#gid=478926885",
+				"SHEET": "Leads Raw",
+				"HEADER_ROW": "5",
+				"COLUMN_START": "1",
+				"COLS": {
+					"Lead Date": {"NAME":"LEAD_DATE", "TYPE": "DATE", "REQUIRED": true},
+					"Client": {"NAME":"CLIENT", "TYPE": "VARCHAR", "REQUIRED": true},
+					"First Name": {"NAME":"FIRST_NAME", "TYPE": "VARCHAR", "REQUIRED": true},
+					"Last Name": {"NAME":"LAST_NAME", "TYPE": "VARCHAR", "REQUIRED": true},
+					"Email": {"NAME":"EMAIL", "TYPE": "VARCHAR", "REQUIRED": true},
+					"Phone": {"NAME":"PHONE", "TYPE": "VARCHAR", "REQUIRED": true},
+					"Source": {"NAME":"SOURCE", "TYPE": "VARCHAR", "REQUIRED": true},
+					"Source2": {"NAME":"SOURCE2", "TYPE": "VARCHAR", "REQUIRED": true},
+					"Qualified?": {"NAME":"QUALIFIED", "TYPE": "VARCHAR", "REQUIRED": true},
+					"Revenue Estimate": {"NAME":"REVENUE_ESTIMATE", "TYPE": "FLOAT", "REQUIRED": true},
+					"Address": {"NAME":"ADDRESS", "TYPE": "VARCHAR", "REQUIRED": false}
+				}
+			}
+		]
+	},
+
+	"PAID_MEDIA_RAW":{
+		"DB":"EXAMPLE",
+		"SCHEMA":"RAW",
+		"SKIP_DELETE": false,
+		"T_COLS":["DATE","CLIENT", "CAMPAIGN_NAME", "PLATFORM", "SPEND", "IMPRESSIONS", "CLICKS", "CTR", "STATUS", "NOTES", "DATASOURCE", "DATASOURCE_SHEET", "LOAD_DATE"],
+		"SHEETS":[
+			{
+				"LINK": "https://docs.google.com/spreadsheets/d/1vqaH-AAwUbBmAphs8XFjeUScpvbNHbGckpItfMQ_UyE/edit?gid=478926885#gid=478926885",
+				"SHEET": "Paid Media Raw",
+				"HEADER_ROW": "3",
+				"COLUMN_START": "1",
+				"COLS": {
+					"Date": {"NAME":"DATE", "TYPE": "DATE", "REQUIRED": true},
+					"Client ": {"NAME":"CLIENT", "TYPE": "VARCHAR", "REQUIRED": true},
+					"Campaign Name": {"NAME":"CAMPAIGN_NAME", "TYPE": "VARCHAR", "REQUIRED": true},
+					"Platform": {"NAME":"PLATFORM", "TYPE": "VARCHAR", "REQUIRED": true},
+					"Spend": {"NAME":"SPEND", "TYPE": "FLOAT", "REQUIRED": true},
+					"Impressions": {"NAME":"IMPRESSIONS", "TYPE": "INT", "REQUIRED": true},
+					"Clicks": {"NAME":"CLICKS", "TYPE": "INT", "REQUIRED": true},
+					"CTR ": {"NAME":"CTR", "TYPE": "FLOAT", "REQUIRED": true},
+					"Status": {"NAME":"STATUS", "TYPE": "VARCHAR", "REQUIRED": true},
+					"Notes": {"NAME":"NOTES", "TYPE": "VARCHAR", "REQUIRED": true}
+				}
+			}
+		]
+	},
+
+	"MONTHLY_BUDGET_RAW":{
+		"DB":"EXAMPLE",
+		"SCHEMA":"RAW",
+		"SKIP_DELETE": false,
+		"T_COLS":["CLIENT", "FISCAL_YEAR", "CAMPAIGN", "LAUNCH_DATE", "END_DATE", "GROSS_BUDGET", "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC", "NOTES", "DATASOURCE", "DATASOURCE_SHEET", "LOAD_DATE"],
+		"SHEETS":[
+			{
+				"LINK": "https://docs.google.com/spreadsheets/d/1vqaH-AAwUbBmAphs8XFjeUScpvbNHbGckpItfMQ_UyE/edit?gid=478926885#gid=478926885",
+				"SHEET": "Monthly Budget Raw",
+				"HEADER_ROW": "2",
+				"COLUMN_START": "1",
+				"COLS": {
+					"Client": {"NAME":"CLIENT", "TYPE": "VARCHAR", "REQUIRED": true},
+					"Fiscal Year": {"NAME": "FISCAL_YEAR", "TYPE":"INT", "REQUIRED": true},
+					"Campaign": {"NAME":"CAMPAIGN", "TYPE": "VARCHAR", "REQUIRED": true},
+					"Launch Date": {"NAME":"LAUNCH_DATE", "TYPE": "DATE", "REQUIRED": true},
+					"End Date": {"NAME":"END_DATE", "TYPE": "DATE", "REQUIRED": true},
+					"Gross Budget": {"NAME":"GROSS_BUDGET", "TYPE": "FLOAT", "REQUIRED": true},
+					"JAN": {"NAME":"JAN", "TYPE": "FLOAT", "REQUIRED": true},
+					"FEB": {"NAME":"FEB", "TYPE": "FLOAT", "REQUIRED": true},
+					"MAR": {"NAME":"MAR", "TYPE": "FLOAT", "REQUIRED": true},
+					"APR": {"NAME":"APR", "TYPE": "FLOAT", "REQUIRED": true},
+					"MAY": {"NAME":"MAY", "TYPE": "FLOAT", "REQUIRED": true},
+					"JUN": {"NAME":"JUN", "TYPE": "FLOAT", "REQUIRED": true},
+					"JUL": {"NAME":"JUL", "TYPE": "FLOAT", "REQUIRED": true},
+					"AUG": {"NAME":"AUG", "TYPE": "FLOAT", "REQUIRED": true},
+					"SEP": {"NAME":"SEP", "TYPE": "FLOAT", "REQUIRED": true},
+					"OCT": {"NAME":"OCT", "TYPE": "FLOAT", "REQUIRED": true},
+					"NOV": {"NAME":"NOV", "TYPE": "FLOAT", "REQUIRED": true},
+					"DEC": {"NAME":"DEC", "TYPE": "FLOAT", "REQUIRED": true},					
+					"Notes": {"NAME":"NOTES", "TYPE": "VARCHAR", "REQUIRED": true}
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,10 @@
+pyarrow
+oauth2client
+boto3
+gspread
+google-auth
+pandas
+numpy
+dateparser
+snowflake-connector-python[pandas]
+cryptography
