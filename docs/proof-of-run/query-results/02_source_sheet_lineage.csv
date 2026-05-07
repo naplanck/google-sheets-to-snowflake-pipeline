@@ -1,0 +1,6 @@
+TABLE_NAME,DATASOURCE,DATASOURCE_SHEET,ROW_COUNT
+CAMPAIGN_TRACKER_RAW,https://docs.google.com/spreadsheets/d/1vqaH-AAwUbBmAphs8XFjeUScpvbNHbGckpItfMQ_UyE/edit?usp=sharing,Campaign Tracker - Acme,62
+CAMPAIGN_TRACKER_RAW,https://docs.google.com/spreadsheets/d/1vqaH-AAwUbBmAphs8XFjeUScpvbNHbGckpItfMQ_UyE/edit?usp=sharing,Campaign Tracker - Beacon,64
+LEADS_RAW,https://docs.google.com/spreadsheets/d/1vqaH-AAwUbBmAphs8XFjeUScpvbNHbGckpItfMQ_UyE/edit?gid=478926885#gid=478926885,Leads Raw,86
+MONTHLY_BUDGET_RAW,https://docs.google.com/spreadsheets/d/1vqaH-AAwUbBmAphs8XFjeUScpvbNHbGckpItfMQ_UyE/edit?gid=478926885#gid=478926885,Monthly Budget Raw,66
+PAID_MEDIA_RAW,https://docs.google.com/spreadsheets/d/1vqaH-AAwUbBmAphs8XFjeUScpvbNHbGckpItfMQ_UyE/edit?gid=478926885#gid=478926885,Paid Media Raw,80

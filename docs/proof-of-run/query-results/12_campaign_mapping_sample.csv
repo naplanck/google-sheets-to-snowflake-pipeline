@@ -1,0 +1,200 @@
+CLIENT,CAMPAIGN,CAMPAIGN_NAME,PLATFORM,IS_ACTIVE,CREATED_AT
+Acme Health,Awareness Core,ACME_YOUTUBE_Awareness_Core,YouTube,true,2026-05-07 11:17:53.259
+Acme Health,Awareness Expansion,ACME_GOOGLEADS_Awareness_Expansion,Google Ads,true,2026-05-07 11:17:53.259
+Acme Health,Awareness Expansion,ACME_META_Awareness_Expansion,Meta,true,2026-05-07 11:17:53.259
+Acme Health,Awareness Expansion,ACME_TIKTOK_Awareness_Expansion,TikTok,true,2026-05-07 11:17:53.259
+Acme Health,Awareness Expansion,ACME_YOUTUBE_Awareness_Expansion,YouTube,true,2026-05-07 11:17:53.259
+Acme Health,Awareness Local,ACME_TIKTOK_Awareness_Local,TikTok,true,2026-05-07 11:17:53.259
+Acme Health,Brand Always On,ACME_GOOGLEADS_Search_Brand_AlwaysOn,Google Ads,true,2026-05-07 11:17:53.259
+Acme Health,Brand Always On,ACME_PROGRAMMATIC_Search_Brand_AlwaysOn,Programmatic,true,2026-05-07 11:17:53.259
+Acme Health,Brand Always On,ACME_YOUTUBE_Search_Brand_AlwaysOn,YouTube,true,2026-05-07 11:17:53.259
+Acme Health,Brand Core,ACME_TIKTOK_Search_Brand_Core,TikTok,true,2026-05-07 11:17:53.259
+Acme Health,Brand Expansion,ACME_TIKTOK_Search_Brand_Expansion,TikTok,true,2026-05-07 11:17:53.259
+Acme Health,Brand Local,ACME_GOOGLEADS_Search_Brand_Local,Google Ads,true,2026-05-07 11:17:53.259
+Acme Health,Brand Q1,ACME_GOOGLEADS_Search_Brand_Q1,Google Ads,true,2026-05-07 11:17:53.259
+Acme Health,Brand Q1,ACME_TIKTOK_Search_Brand_Q1,TikTok,true,2026-05-07 11:17:53.259
+Acme Health,Brand Q1,ACME_YOUTUBE_Search_Brand_Q1,YouTube,true,2026-05-07 11:17:53.259
+Acme Health,Brand Q2,ACME_GOOGLEADS_Search_Brand_Q2,Google Ads,true,2026-05-07 11:17:53.259
+Acme Health,Brand Q2,ACME_TIKTOK_Search_Brand_Q2,TikTok,true,2026-05-07 11:17:53.259
+Acme Health,Brand Q3,ACME_GOOGLEADS_Search_Brand_Q3,Google Ads,true,2026-05-07 11:17:53.259
+Acme Health,Brand Q3,ACME_YOUTUBE_Search_Brand_Q3,YouTube,true,2026-05-07 11:17:53.259
+Acme Health,Brand Q4,ACME_TIKTOK_Search_Brand_Q4,TikTok,true,2026-05-07 11:17:53.259
+Acme Health,Brand Q4,ACME_YOUTUBE_Search_Brand_Q4,YouTube,true,2026-05-07 11:17:53.259
+Acme Health,Competitor Always On,ACME_GOOGLEADS_Competitor_AlwaysOn,Google Ads,true,2026-05-07 11:17:53.259
+Acme Health,Competitor Always On,ACME_YOUTUBE_Competitor_AlwaysOn,YouTube,true,2026-05-07 11:17:53.259
+Acme Health,Competitor Expansion,ACME_TIKTOK_Competitor_Expansion,TikTok,true,2026-05-07 11:17:53.259
+Acme Health,Competitor Expansion,ACME_YOUTUBE_Competitor_Expansion,YouTube,true,2026-05-07 11:17:53.259
+Acme Health,Lead Gen Always On,ACME_TIKTOK_LeadGen_AlwaysOn,TikTok,true,2026-05-07 11:17:53.259
+Acme Health,Lead Gen Core,ACME_META_LeadGen_Core,Meta,true,2026-05-07 11:17:53.259
+Acme Health,Lead Gen Core,ACME_TIKTOK_LeadGen_Core,TikTok,true,2026-05-07 11:17:53.259
+Acme Health,Lead Gen Local,ACME_GOOGLEADS_LeadGen_Local,Google Ads,true,2026-05-07 11:17:53.259
+Acme Health,Lead Gen Local,ACME_YOUTUBE_LeadGen_Local,YouTube,true,2026-05-07 11:17:53.259
+Acme Health,Lead Gen Test,ACME_YOUTUBE_LeadGen_Test,YouTube,true,2026-05-07 11:17:53.259
+Acme Health,Local Always On,ACME_LINKEDIN_Local_AlwaysOn,LinkedIn,true,2026-05-07 11:17:53.259
+Acme Health,Local Always On,ACME_META_Local_AlwaysOn,Meta,true,2026-05-07 11:17:53.259
+Acme Health,Local Core,ACME_META_Local_Core,Meta,true,2026-05-07 11:17:53.259
+Acme Health,Local Local,ACME_LINKEDIN_Local_Local,LinkedIn,true,2026-05-07 11:17:53.259
+Acme Health,Local Local,ACME_PROGRAMMATIC_Local_Local,Programmatic,true,2026-05-07 11:17:53.259
+Acme Health,Local Test,ACME_PROGRAMMATIC_Local_Test,Programmatic,true,2026-05-07 11:17:53.259
+Acme Health,NonBrand Always On,ACME_LINKEDIN_Search_NonBrand_AlwaysOn,LinkedIn,true,2026-05-07 11:17:53.259
+Acme Health,NonBrand Always On,ACME_TIKTOK_Search_NonBrand_AlwaysOn,TikTok,true,2026-05-07 11:17:53.259
+Acme Health,NonBrand Core,ACME_META_Search_NonBrand_Core,Meta,true,2026-05-07 11:17:53.259
+Acme Health,NonBrand Core,ACME_PROGRAMMATIC_Search_NonBrand_Core,Programmatic,true,2026-05-07 11:17:53.259
+Acme Health,NonBrand Expansion,ACME_META_Search_NonBrand_Expansion,Meta,true,2026-05-07 11:17:53.259
+Acme Health,NonBrand Local,ACME_LINKEDIN_Search_NonBrand_Local,LinkedIn,true,2026-05-07 11:17:53.259
+Acme Health,NonBrand Local,ACME_PROGRAMMATIC_Search_NonBrand_Local,Programmatic,true,2026-05-07 11:17:53.259
+Acme Health,Prospecting Always On,ACME_TIKTOK_Prospecting_AlwaysOn,TikTok,true,2026-05-07 11:17:53.259
+Acme Health,Prospecting Always On,ACME_YOUTUBE_Prospecting_AlwaysOn,YouTube,true,2026-05-07 11:17:53.259
+Acme Health,Prospecting Core,ACME_GOOGLEADS_Prospecting_Core,Google Ads,true,2026-05-07 11:17:53.259
+Acme Health,Prospecting Expansion,ACME_GOOGLEADS_Prospecting_Expansion,Google Ads,true,2026-05-07 11:17:53.259
+Acme Health,Prospecting Local,ACME_GOOGLEADS_Prospecting_Local,Google Ads,true,2026-05-07 11:17:53.259
+Acme Health,Prospecting Local,ACME_YOUTUBE_Prospecting_Local,YouTube,true,2026-05-07 11:17:53.259
+Acme Health,Remarketing Always On,ACME_LINKEDIN_Remarketing_AlwaysOn,LinkedIn,true,2026-05-07 11:17:53.259
+Acme Health,Remarketing Core,ACME_LINKEDIN_Remarketing_Core,LinkedIn,true,2026-05-07 11:17:53.259
+Acme Health,Remarketing Core,ACME_META_Remarketing_Core,Meta,true,2026-05-07 11:17:53.259
+Acme Health,Remarketing Core,ACME_PROGRAMMATIC_Remarketing_Core,Programmatic,true,2026-05-07 11:17:53.259
+Acme Health,Remarketing Expansion,ACME_META_Remarketing_Expansion,Meta,true,2026-05-07 11:17:53.259
+Acme Health,Remarketing Expansion,ACME_PROGRAMMATIC_Remarketing_Expansion,Programmatic,true,2026-05-07 11:17:53.259
+Acme Health,Remarketing Test,ACME_PROGRAMMATIC_Remarketing_Test,Programmatic,true,2026-05-07 11:17:53.259
+Acme Health,Retargeting Always On,ACME_LINKEDIN_Retargeting_AlwaysOn,LinkedIn,true,2026-05-07 11:17:53.259
+Acme Health,Retargeting Always On,ACME_META_Retargeting_AlwaysOn,Meta,true,2026-05-07 11:17:53.259
+Acme Health,Retargeting Always On,ACME_PROGRAMMATIC_Retargeting_AlwaysOn,Programmatic,true,2026-05-07 11:17:53.259
+Acme Health,Retargeting Always On,ACME_YOUTUBE_Retargeting_AlwaysOn,YouTube,true,2026-05-07 11:17:53.259
+Acme Health,Retargeting Test,ACME_META_Retargeting_Test,Meta,true,2026-05-07 11:17:53.259
+Acme Health,Upper Funnel Always On,ACME_META_UpperFunnel_AlwaysOn,Meta,true,2026-05-07 11:17:53.259
+Acme Health,Upper Funnel Core,ACME_LINKEDIN_UpperFunnel_Core,LinkedIn,true,2026-05-07 11:17:53.259
+Acme Health,Upper Funnel Expansion,ACME_LINKEDIN_UpperFunnel_Expansion,LinkedIn,true,2026-05-07 11:17:53.259
+Acme Health,Upper Funnel Expansion,ACME_PROGRAMMATIC_UpperFunnel_Expansion,Programmatic,true,2026-05-07 11:17:53.259
+Acme Health,Upper Funnel Local,ACME_PROGRAMMATIC_UpperFunnel_Local,Programmatic,true,2026-05-07 11:17:53.259
+Acme Health,Upper Funnel Q1,ACME_GOOGLEADS_UpperFunnel_Q1,Google Ads,true,2026-05-07 11:17:53.259
+Acme Health,Upper Funnel Q1,ACME_YOUTUBE_UpperFunnel_Q1,YouTube,true,2026-05-07 11:17:53.259
+Acme Health,Upper Funnel Q2,ACME_TIKTOK_UpperFunnel_Q2,TikTok,true,2026-05-07 11:17:53.259
+Acme Health,Upper Funnel Q2,ACME_YOUTUBE_UpperFunnel_Q2,YouTube,true,2026-05-07 11:17:53.259
+Acme Health,Upper Funnel Q3,ACME_GOOGLEADS_UpperFunnel_Q3,Google Ads,true,2026-05-07 11:17:53.259
+Acme Health,Upper Funnel Q3,ACME_TIKTOK_UpperFunnel_Q3,TikTok,true,2026-05-07 11:17:53.259
+Acme Health,Upper Funnel Q4,ACME_GOOGLEADS_UpperFunnel_Q4,Google Ads,true,2026-05-07 11:17:53.259
+Acme Health,Upper Funnel Q4,ACME_YOUTUBE_UpperFunnel_Q4,YouTube,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Awareness Always On,BCN_GOOGLEADS_Awareness_AlwaysOn,Google Ads,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Awareness Always On,BCN_TIKTOK_Awareness_AlwaysOn,TikTok,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Awareness Expansion,BCN_LINKEDIN_Awareness_Expansion,LinkedIn,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Awareness Expansion,BCN_TIKTOK_Awareness_Expansion,TikTok,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Awareness Local,BCN_GOOGLEADS_Awareness_Local,Google Ads,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Awareness Local,BCN_YOUTUBE_Awareness_Local,YouTube,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Brand Always On,BCN_GOOGLEADS_Search_Brand_AlwaysOn,Google Ads,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Brand Always On,BCN_TIKTOK_Search_Brand_AlwaysOn,TikTok,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Brand Always On,BCN_YOUTUBE_Search_Brand_AlwaysOn,YouTube,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Brand Core,BCN_TIKTOK_Search_Brand_Core,TikTok,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Brand Expansion,BCN_GOOGLEADS_Search_Brand_Expansion,Google Ads,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Competitor Always On,BCN_TIKTOK_Competitor_AlwaysOn,TikTok,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Competitor Always On,BCN_YOUTUBE_Competitor_AlwaysOn,YouTube,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Competitor Core,BCN_GOOGLEADS_Competitor_Core,Google Ads,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Competitor Core,BCN_TIKTOK_Competitor_Core,TikTok,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Competitor Expansion,BCN_YOUTUBE_Competitor_Expansion,YouTube,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Lead Gen Always On,BCN_TIKTOK_LeadGen_AlwaysOn,TikTok,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Lead Gen Always On,BCN_YOUTUBE_LeadGen_AlwaysOn,YouTube,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Lead Gen Core,BCN_GOOGLEADS_LeadGen_Core,Google Ads,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Lead Gen Core,BCN_YOUTUBE_LeadGen_Core,YouTube,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Lead Gen Expansion,BCN_GOOGLEADS_LeadGen_Expansion,Google Ads,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Lead Gen Local,BCN_PROGRAMMATIC_LeadGen_Local,Programmatic,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Lead Gen Local,BCN_TIKTOK_LeadGen_Local,TikTok,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Lead Gen Test,BCN_TIKTOK_LeadGen_Test,TikTok,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Local Always On,BCN_META_Local_AlwaysOn,Meta,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Local Expansion,BCN_LINKEDIN_Local_Expansion,LinkedIn,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Local Local,BCN_LINKEDIN_Local_Local,LinkedIn,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Local Local,BCN_META_Local_Local,Meta,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Local Local,BCN_PROGRAMMATIC_Local_Local,Programmatic,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Local Test,BCN_LINKEDIN_Local_Test,LinkedIn,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Local Test,BCN_META_Local_Test,Meta,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Local Test,BCN_PROGRAMMATIC_Local_Test,Programmatic,true,2026-05-07 11:17:53.259
+BEACON CLINIC,NonBrand Always On,BCN_LINKEDIN_Search_NonBrand_AlwaysOn,LinkedIn,true,2026-05-07 11:17:53.259
+BEACON CLINIC,NonBrand Always On,BCN_PROGRAMMATIC_Search_NonBrand_AlwaysOn,Programmatic,true,2026-05-07 11:17:53.259
+BEACON CLINIC,NonBrand Core,BCN_TIKTOK_Search_NonBrand_Core,TikTok,true,2026-05-07 11:17:53.259
+BEACON CLINIC,NonBrand Expansion,BCN_GOOGLEADS_Search_NonBrand_Expansion,Google Ads,true,2026-05-07 11:17:53.259
+BEACON CLINIC,NonBrand Expansion,BCN_LINKEDIN_Search_NonBrand_Expansion,LinkedIn,true,2026-05-07 11:17:53.259
+BEACON CLINIC,NonBrand Expansion,BCN_PROGRAMMATIC_Search_NonBrand_Expansion,Programmatic,true,2026-05-07 11:17:53.259
+BEACON CLINIC,NonBrand Local,BCN_META_Search_NonBrand_Local,Meta,true,2026-05-07 11:17:53.259
+BEACON CLINIC,NonBrand Local,BCN_PROGRAMMATIC_Search_NonBrand_Local,Programmatic,true,2026-05-07 11:17:53.259
+BEACON CLINIC,NonBrand Test,BCN_META_Search_NonBrand_Test,Meta,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Prospecting Always On,BCN_GOOGLEADS_Prospecting_AlwaysOn,Google Ads,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Prospecting Always On,BCN_YOUTUBE_Prospecting_AlwaysOn,YouTube,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Prospecting Local,BCN_GOOGLEADS_Prospecting_Local,Google Ads,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Prospecting Local,BCN_TIKTOK_Prospecting_Local,TikTok,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Prospecting Q1,BEACON_GOOGLEADS_Prospecting_Q1,Google Ads,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Prospecting Q1,BEACON_TIKTOK_Prospecting_Q1,TikTok,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Prospecting Q2,BEACON_GOOGLEADS_Prospecting_Q2,Google Ads,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Prospecting Q3,BEACON_TIKTOK_Prospecting_Q3,TikTok,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Prospecting Q3,BEACON_YOUTUBE_Prospecting_Q3,YouTube,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Prospecting Q4,BEACON_GOOGLEADS_Prospecting_Q4,Google Ads,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Prospecting Q4,BEACON_TIKTOK_Prospecting_Q4,TikTok,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Prospecting Test,BCN_GOOGLEADS_Prospecting_Test,Google Ads,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Prospecting Test,BCN_TIKTOK_Prospecting_Test,TikTok,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Prospecting Test,BCN_YOUTUBE_Prospecting_Test,YouTube,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Remarketing Always On,BCN_LINKEDIN_Remarketing_AlwaysOn,LinkedIn,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Remarketing Always On,BCN_META_Remarketing_AlwaysOn,Meta,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Remarketing Always On,BCN_PROGRAMMATIC_Remarketing_AlwaysOn,Programmatic,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Remarketing Core,BCN_PROGRAMMATIC_Remarketing_Core,Programmatic,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Remarketing Expansion,BCN_META_Remarketing_Expansion,Meta,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Remarketing Local,BCN_META_Remarketing_Local,Meta,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Retargeting Always On,BCN_META_Retargeting_AlwaysOn,Meta,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Retargeting Local,BCN_META_Retargeting_Local,Meta,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Retargeting Local,BCN_PROGRAMMATIC_Retargeting_Local,Programmatic,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Retargeting Q1,BEACON_TIKTOK_Retargeting_Q1,TikTok,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Retargeting Q1,BEACON_YOUTUBE_Retargeting_Q1,YouTube,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Retargeting Q2,BEACON_GOOGLEADS_Retargeting_Q2,Google Ads,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Retargeting Q2,BEACON_TIKTOK_Retargeting_Q2,TikTok,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Retargeting Q3,BEACON_GOOGLEADS_Retargeting_Q3,Google Ads,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Retargeting Q3,BEACON_YOUTUBE_Retargeting_Q3,YouTube,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Retargeting Q4,BEACON_TIKTOK_Retargeting_Q4,TikTok,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Retargeting Q4,BEACON_YOUTUBE_Retargeting_Q4,YouTube,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Retargeting Test,BCN_LINKEDIN_Retargeting_Test,LinkedIn,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Retargeting Test,BCN_META_Retargeting_Test,Meta,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Upper Funnel Always On,BCN_LINKEDIN_UpperFunnel_AlwaysOn,LinkedIn,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Upper Funnel Core,BCN_LINKEDIN_UpperFunnel_Core,LinkedIn,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Upper Funnel Core,BCN_META_UpperFunnel_Core,Meta,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Upper Funnel Expansion,BCN_PROGRAMMATIC_UpperFunnel_Expansion,Programmatic,true,2026-05-07 11:17:53.259
+BEACON CLINIC,Upper Funnel Local,BCN_PROGRAMMATIC_UpperFunnel_Local,Programmatic,true,2026-05-07 11:17:53.259
+Luna Pediatrics,Awareness Q1,LUNA_TIKTOK_Awareness_Q1,TikTok,true,2026-05-07 11:17:53.259
+Luna Pediatrics,Awareness Q1,LUNA_YOUTUBE_Awareness_Q1,YouTube,true,2026-05-07 11:17:53.259
+Luna Pediatrics,Awareness Q2,LUNA_GOOGLEADS_Awareness_Q2,Google Ads,true,2026-05-07 11:17:53.259
+Luna Pediatrics,Awareness Q2,LUNA_TIKTOK_Awareness_Q2,TikTok,true,2026-05-07 11:17:53.259
+Luna Pediatrics,Awareness Q3,LUNA_GOOGLEADS_Awareness_Q3,Google Ads,true,2026-05-07 11:17:53.259
+Luna Pediatrics,Awareness Q3,LUNA_YOUTUBE_Awareness_Q3,YouTube,true,2026-05-07 11:17:53.259
+Luna Pediatrics,Awareness Q4,LUNA_TIKTOK_Awareness_Q4,TikTok,true,2026-05-07 11:17:53.259
+Luna Pediatrics,Awareness Q4,LUNA_YOUTUBE_Awareness_Q4,YouTube,true,2026-05-07 11:17:53.259
+Luna Pediatrics,Local Q1,LUNA_TIKTOK_Local_Q1,TikTok,true,2026-05-07 11:17:53.259
+Luna Pediatrics,Local Q2,LUNA_GOOGLEADS_Local_Q2,Google Ads,true,2026-05-07 11:17:53.259
+Luna Pediatrics,Local Q2,LUNA_YOUTUBE_Local_Q2,YouTube,true,2026-05-07 11:17:53.259
+Luna Pediatrics,Local Q3,LUNA_TIKTOK_Local_Q3,TikTok,true,2026-05-07 11:17:53.259
+Luna Pediatrics,Local Q3,LUNA_YOUTUBE_Local_Q3,YouTube,true,2026-05-07 11:17:53.259
+Luna Pediatrics,Local Q4,LUNA_GOOGLEADS_Local_Q4,Google Ads,true,2026-05-07 11:17:53.259
+Luna Pediatrics,Local Q4,LUNA_TIKTOK_Local_Q4,TikTok,true,2026-05-07 11:17:53.259
+Northstar Labs,Competitor Q1,NORTHSTAR_GOOGLEADS_Competitor_Q1,Google Ads,true,2026-05-07 11:17:53.259
+Northstar Labs,Competitor Q1,NORTHSTAR_YOUTUBE_Competitor_Q1,YouTube,true,2026-05-07 11:17:53.259
+Northstar Labs,Competitor Q2,NORTHSTAR_TIKTOK_Competitor_Q2,TikTok,true,2026-05-07 11:17:53.259
+Northstar Labs,Competitor Q2,NORTHSTAR_YOUTUBE_Competitor_Q2,YouTube,true,2026-05-07 11:17:53.259
+Northstar Labs,Competitor Q3,NORTHSTAR_GOOGLEADS_Competitor_Q3,Google Ads,true,2026-05-07 11:17:53.259
+Northstar Labs,Competitor Q3,NORTHSTAR_TIKTOK_Competitor_Q3,TikTok,true,2026-05-07 11:17:53.259
+Northstar Labs,Competitor Q4,NORTHSTAR_GOOGLEADS_Competitor_Q4,Google Ads,true,2026-05-07 11:17:53.259
+Northstar Labs,Competitor Q4,NORTHSTAR_YOUTUBE_Competitor_Q4,YouTube,true,2026-05-07 11:17:53.259
+Northstar Labs,NonBrand Q1,NORTHSTAR_TIKTOK_Search_NonBrand_Q1,TikTok,true,2026-05-07 11:17:53.259
+Northstar Labs,NonBrand Q1,NORTHSTAR_YOUTUBE_Search_NonBrand_Q1,YouTube,true,2026-05-07 11:17:53.259
+Northstar Labs,NonBrand Q2,NORTHSTAR_GOOGLEADS_Search_NonBrand_Q2,Google Ads,true,2026-05-07 11:17:53.259
+Northstar Labs,NonBrand Q2,NORTHSTAR_TIKTOK_Search_NonBrand_Q2,TikTok,true,2026-05-07 11:17:53.259
+Northstar Labs,NonBrand Q3,NORTHSTAR_GOOGLEADS_Search_NonBrand_Q3,Google Ads,true,2026-05-07 11:17:53.259
+Northstar Labs,NonBrand Q4,NORTHSTAR_TIKTOK_Search_NonBrand_Q4,TikTok,true,2026-05-07 11:17:53.259
+Northstar Labs,NonBrand Q4,NORTHSTAR_YOUTUBE_Search_NonBrand_Q4,YouTube,true,2026-05-07 11:17:53.259
+Orion Dental,Lead Gen Q1,ORION_GOOGLEADS_LeadGen_Q1,Google Ads,true,2026-05-07 11:17:53.259
+Orion Dental,Lead Gen Q1,ORION_YOUTUBE_LeadGen_Q1,YouTube,true,2026-05-07 11:17:53.259
+Orion Dental,Lead Gen Q2,ORION_TIKTOK_LeadGen_Q2,TikTok,true,2026-05-07 11:17:53.259
+Orion Dental,Lead Gen Q2,ORION_YOUTUBE_LeadGen_Q2,YouTube,true,2026-05-07 11:17:53.259
+Orion Dental,Lead Gen Q3,ORION_GOOGLEADS_LeadGen_Q3,Google Ads,true,2026-05-07 11:17:53.259
+Orion Dental,Lead Gen Q3,ORION_TIKTOK_LeadGen_Q3,TikTok,true,2026-05-07 11:17:53.259
+Orion Dental,Lead Gen Q4,ORION_GOOGLEADS_LeadGen_Q4,Google Ads,true,2026-05-07 11:17:53.259
+Orion Dental,Lead Gen Q4,ORION_YOUTUBE_LeadGen_Q4,YouTube,true,2026-05-07 11:17:53.259
+Orion Dental,Remarketing Q1,ORION_GOOGLEADS_Remarketing_Q1,Google Ads,true,2026-05-07 11:17:53.259
+Orion Dental,Remarketing Q1,ORION_TIKTOK_Remarketing_Q1,TikTok,true,2026-05-07 11:17:53.259
+Orion Dental,Remarketing Q2,ORION_GOOGLEADS_Remarketing_Q2,Google Ads,true,2026-05-07 11:17:53.259
+Orion Dental,Remarketing Q2,ORION_YOUTUBE_Remarketing_Q2,YouTube,true,2026-05-07 11:17:53.259
+Orion Dental,Remarketing Q3,ORION_TIKTOK_Remarketing_Q3,TikTok,true,2026-05-07 11:17:53.259
+Orion Dental,Remarketing Q3,ORION_YOUTUBE_Remarketing_Q3,YouTube,true,2026-05-07 11:17:53.259
+Orion Dental,Remarketing Q4,ORION_TIKTOK_Remarketing_Q4,TikTok,true,2026-05-07 11:17:53.259

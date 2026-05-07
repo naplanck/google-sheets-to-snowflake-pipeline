@@ -1,0 +1,377 @@
+timestamp,message
+1.77818E+12,"START RequestId: 07b6bd35-c265-415d-ac0e-aa3ce2bfa11e Version: $LATEST
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:20.284Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Starting S3 Client
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:20.308Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Fetching from S3 Bucket <config-bucket>
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:20.402Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Reading Transformation Rules
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:20.404Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Starting Boto3
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:20.408Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Fetching Secrets for Google Sheets
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:20.500Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Fetching Secrets for SnowFlake
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:20.529Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Setting Credentials for Google Sheets
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:20.673Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Auth for Google Sheets
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:20.673Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Processing table CAMPAIGN_TRACKER_RAW
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:20.673Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Opening Google Sheet
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:21.381Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Fetching Google Sheet data
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:21.529Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Cleaning up Data
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:21.529Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Slicing Rows
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:21.529Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Getting Max Width and appending to Rows
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:21.529Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting to DataFrame
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:21.530Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Removing Empty Rows and Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:21.532Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Aligning Data
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:21.532Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Checking for Duplicate Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:21.532Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Checking for required Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:21.532Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Checking for optional Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:21.532Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Adding in optional Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:21.532Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Restricting Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:21.533Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Renaming Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:21.533Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting Column Types
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:21.533Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting LAUNCH_DATE to DATE
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:22.109Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting END_DATE to DATE
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:22.667Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting NAMING_CONVENTION to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:22.668Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting PLATFORM to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:22.668Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting STATUS to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:22.668Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting OWNER to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:22.669Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting NOTES to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:22.687Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Opening Google Sheet
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:22.929Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Fetching Google Sheet data
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:23.085Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Cleaning up Data
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:23.086Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Slicing Rows
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:23.086Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Getting Max Width and appending to Rows
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:23.086Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting to DataFrame
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:23.086Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Removing Empty Rows and Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:23.088Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Aligning Data
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:23.088Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Checking for Duplicate Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:23.088Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Checking for required Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:23.088Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Checking for optional Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:23.088Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Adding in optional Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:23.089Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Restricting Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:23.089Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Renaming Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:23.089Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting Column Types
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:23.089Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting LAUNCH_DATE to DATE
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:23.673Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting END_DATE to DATE
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:24.267Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting NAMING_CONVENTION to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:24.268Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting PLATFORM to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:24.269Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting STATUS to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:24.269Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting OWNER to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:24.269Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting PRIORITY to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:24.270Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting NOTES to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:24.288Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Creating combined table DataFrame
+"
+1.77818E+12,"/var/task/GS_Uploader.py:451: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+"
+1.77818E+12,"main_df = pd.concat(aligned_dfs, ignore_index=True)
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:24.291Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Connecting to SF
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:24.451Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Snowflake Connector for Python Version: 4.4.0, Python Version: 3.12.13, Platform: Linux-5.10.252-285.992.amzn2.x86_64-x86_64-with-glibc2.34
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:24.451Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Connecting to GLOBAL Snowflake domain
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:25.010Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Creating temp table CAMPAIGN_TRACKER_RAW_stage_a6ee4287
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:25.318Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Writing DataFrame to temp table CAMPAIGN_TRACKER_RAW_stage_a6ee4287
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:27.551Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Beginning Snowflake transaction
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:27.769Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Deleting from CAMPAIGN_TRACKER_RAW
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:28.177Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Inserting into CAMPAIGN_TRACKER_RAW from CAMPAIGN_TRACKER_RAW_stage_a6ee4287
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:28.571Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Committing Snowflake transaction
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:29.014Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Processing table LEADS_RAW
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:29.014Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Opening Google Sheet
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:29.242Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Fetching Google Sheet data
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:29.373Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Cleaning up Data
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:29.373Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Slicing Rows
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:29.373Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Getting Max Width and appending to Rows
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:29.373Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting to DataFrame
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:29.374Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Removing Empty Rows and Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:29.376Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Aligning Data
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:29.376Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Checking for Duplicate Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:29.376Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Checking for required Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:29.376Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Checking for optional Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:29.376Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Adding in optional Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:29.377Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Restricting Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:29.377Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Renaming Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:29.378Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting Column Types
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:29.378Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting LEAD_DATE to DATE
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:30.129Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting CLIENT to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:30.130Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting FIRST_NAME to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:30.147Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting LAST_NAME to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:30.147Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting EMAIL to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:30.148Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting PHONE to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:30.148Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting SOURCE to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:30.149Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting SOURCE2 to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:30.149Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting QUALIFIED to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:30.150Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting REVENUE_ESTIMATE to FLOAT
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:30.153Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting ADDRESS to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:30.168Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Creating combined table DataFrame
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:30.169Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Connecting to SF
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:30.329Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Snowflake Connector for Python Version: 4.4.0, Python Version: 3.12.13, Platform: Linux-5.10.252-285.992.amzn2.x86_64-x86_64-with-glibc2.34
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:30.329Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Connecting to GLOBAL Snowflake domain
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:30.931Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Creating temp table LEADS_RAW_stage_3803f9fc
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:31.814Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Writing DataFrame to temp table LEADS_RAW_stage_3803f9fc
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:34.279Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Beginning Snowflake transaction
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:34.388Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Deleting from LEADS_RAW
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:34.832Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Inserting into LEADS_RAW from LEADS_RAW_stage_3803f9fc
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:35.503Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Committing Snowflake transaction
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:36.036Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Processing table PAID_MEDIA_RAW
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:36.036Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Opening Google Sheet
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:36.326Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Fetching Google Sheet data
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:36.467Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Cleaning up Data
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:36.467Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Slicing Rows
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:36.467Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Getting Max Width and appending to Rows
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:36.467Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting to DataFrame
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:36.468Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Removing Empty Rows and Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:36.470Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Aligning Data
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:36.470Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Checking for Duplicate Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:36.470Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Checking for required Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:36.470Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Checking for optional Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:36.470Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Adding in optional Columns
+"
+1.77818E+12,"[WARNING]	2026-05-07T17:35:36.470Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Ignored unmapped columns: ['Spend2']
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:36.470Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Restricting Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:36.471Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Renaming Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:36.471Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting Column Types
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:36.471Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting DATE to DATE
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:37.186Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting CLIENT to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:37.187Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting CAMPAIGN_NAME to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:37.188Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting PLATFORM to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:37.188Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting SPEND to FLOAT
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:37.191Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting IMPRESSIONS to INT
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:37.207Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting CLICKS to INT
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:37.226Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting CTR to FLOAT
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:37.230Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting STATUS to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:37.230Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting NOTES to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:37.232Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Creating combined table DataFrame
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:37.233Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Connecting to SF
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:37.409Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Snowflake Connector for Python Version: 4.4.0, Python Version: 3.12.13, Platform: Linux-5.10.252-285.992.amzn2.x86_64-x86_64-with-glibc2.34
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:37.410Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Connecting to GLOBAL Snowflake domain
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:37.934Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Creating temp table PAID_MEDIA_RAW_stage_854d8658
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:38.326Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Writing DataFrame to temp table PAID_MEDIA_RAW_stage_854d8658
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:40.157Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Beginning Snowflake transaction
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:40.244Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Deleting from PAID_MEDIA_RAW
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:40.647Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Inserting into PAID_MEDIA_RAW from PAID_MEDIA_RAW_stage_854d8658
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:41.209Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Committing Snowflake transaction
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:41.717Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Processing table MONTHLY_BUDGET_RAW
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:41.718Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Opening Google Sheet
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:41.958Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Fetching Google Sheet data
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:42.098Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Cleaning up Data
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:42.098Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Slicing Rows
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:42.098Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Getting Max Width and appending to Rows
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:42.098Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting to DataFrame
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:42.099Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Removing Empty Rows and Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:42.101Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Aligning Data
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:42.101Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Checking for Duplicate Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:42.101Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Checking for required Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:42.102Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Checking for optional Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:42.102Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Adding in optional Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:42.102Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Restricting Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:42.102Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Renaming Columns
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:42.102Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting Column Types
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:42.102Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting CLIENT to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:42.103Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting FISCAL_YEAR to INT
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:42.106Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting CAMPAIGN to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:42.108Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting LAUNCH_DATE to DATE
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:42.769Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting END_DATE to DATE
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:43.427Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting GROSS_BUDGET to FLOAT
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:43.447Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting JAN to FLOAT
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:43.451Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting FEB to FLOAT
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:43.454Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting MAR to FLOAT
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:43.469Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting APR to FLOAT
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:43.489Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting MAY to FLOAT
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:43.509Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting JUN to FLOAT
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:43.512Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting JUL to FLOAT
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:43.528Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting AUG to FLOAT
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:43.548Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting SEP to FLOAT
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:43.551Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting OCT to FLOAT
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:43.554Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting NOV to FLOAT
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:43.569Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting DEC to FLOAT
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:43.589Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Converting NOTES to VARCHAR
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:43.591Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Creating combined table DataFrame
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:43.592Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Connecting to SF
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:43.767Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Snowflake Connector for Python Version: 4.4.0, Python Version: 3.12.13, Platform: Linux-5.10.252-285.992.amzn2.x86_64-x86_64-with-glibc2.34
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:43.767Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Connecting to GLOBAL Snowflake domain
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:44.256Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Creating temp table MONTHLY_BUDGET_RAW_stage_eb55fbdc
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:44.531Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Writing DataFrame to temp table MONTHLY_BUDGET_RAW_stage_eb55fbdc
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:46.032Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Beginning Snowflake transaction
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:46.172Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Deleting from MONTHLY_BUDGET_RAW
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:46.512Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Inserting into MONTHLY_BUDGET_RAW from MONTHLY_BUDGET_RAW_stage_eb55fbdc
+"
+1.77818E+12,"[INFO]	2026-05-07T17:35:46.971Z	07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Committing Snowflake transaction
+"
+1.77818E+12,"END RequestId: 07b6bd35-c265-415d-ac0e-aa3ce2bfa11e
+"
+1.77818E+12,"REPORT RequestId: 07b6bd35-c265-415d-ac0e-aa3ce2bfa11e	Duration: 27065.59 ms	Billed Duration: 27066 ms	Memory Size: 512 MB	Max Memory Used: 313 MB	
+"
