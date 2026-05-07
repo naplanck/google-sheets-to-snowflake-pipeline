@@ -10,7 +10,6 @@ import pytest
 
 import GS_Uploader as app
 
-
 # =============================================================================
 # Test helpers
 # =============================================================================
@@ -173,9 +172,7 @@ def test_load_transform_rules_from_s3_wraps_s3_errors(monkeypatch):
     monkeypatch.setenv("TRANSFORM_RULES_BUCKET", "rules-bucket")
     monkeypatch.setattr(app.boto3, "client", lambda service_name: fake_s3)
 
-    with pytest.raises(
-        RuntimeError, match="Failed to load transformation file from s3"
-    ):
+    with pytest.raises(RuntimeError, match="Failed to load transformation file from s3"):
         app.load_transform_rules_from_s3("rules.json")
 
 
@@ -186,9 +183,7 @@ def test_load_transform_rules_from_s3_wraps_s3_errors(monkeypatch):
 
 def test_read_secret_json_reads_secret_string():
     sm = FakeSecretsClient(
-        responses={
-            "my-secret": {"SecretString": '{"User": "svc_user", "Pass": "secret"}'}
-        }
+        responses={"my-secret": {"SecretString": '{"User": "svc_user", "Pass": "secret"}'}}
     )
 
     result = app.read_secret_json(sm, "my-secret")
@@ -360,7 +355,7 @@ def test_get_sheet_values_with_retry_reraises_non_api_errors():
 # =============================================================================
 
 
-def test_sheet_values_to_dataframe_uses_configured_header_and_removes_empty_rows_and_blank_columns():
+def test_sheet_values_to_dataframe_cleans_rows_and_blank_columns():
     values = [
         ["junk title row"],
         ["Name", "Amount", ""],
@@ -632,9 +627,7 @@ def test_validate_sql_identifier_accepts_valid_identifier():
     assert app.validate_sql_identifier("VALID_NAME_123") == "VALID_NAME_123"
 
 
-@pytest.mark.parametrize(
-    "identifier", ["1BAD", "bad-name", "bad name", "bad.name", "", "bad;DROP"]
-)
+@pytest.mark.parametrize("identifier", ["1BAD", "bad-name", "bad name", "bad.name", "", "bad;DROP"])
 def test_validate_sql_identifier_rejects_invalid_identifier(identifier):
     with pytest.raises(ValueError):
         app.validate_sql_identifier(identifier)
@@ -775,9 +768,7 @@ def test_lambda_handler_happy_path_replaces_target_table(monkeypatch):
     app.connect_gsheet.assert_called_once_with({"g": "s"})
     app.connect_sf.assert_called_once_with({"s": "f"}, rules["LEADS_RAW"])
 
-    assert fake_gsheet_client.opened_urls == [
-        "https://docs.google.com/spreadsheets/d/example"
-    ]
+    assert fake_gsheet_client.opened_urls == ["https://docs.google.com/spreadsheets/d/example"]
     assert fake_gsheet_client._spreadsheet.requested_sheets == ["Campaign Tracker"]
 
     assert captured["conn"] is fake_conn
