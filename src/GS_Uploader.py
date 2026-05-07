@@ -2,25 +2,25 @@
 # =============================================================================
 # Imports and global configuration
 # =============================================================================
+import base64
+import json
+import logging
+import os
+import random
+import re
+import time
+import uuid
+from datetime import datetime, timezone
+
+import boto3
+import dateparser
+import gspread
+import pandas as pd
+from cryptography.hazmat.primitives import serialization
+from google.oauth2.service_account import Credentials as GoogleCredentials
+from gspread.exceptions import APIError
 from snowflake import connector
 from snowflake.connector.pandas_tools import write_pandas
-import gspread
-from gspread.exceptions import APIError
-from google.oauth2.service_account import Credentials as GoogleCredentials
-from datetime import datetime, timezone
-import pandas as pd
-import json
-import boto3
-import base64
-import time
-import dateparser
-import re
-import uuid
-import logging
-import random
-import os
-from cryptography.hazmat.primitives import serialization
-
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -117,9 +117,7 @@ def validate_transform_rules(transform_rules):
         for sheet in table_config["SHEETS"]:
             target_names = [col_config["NAME"] for col_config in sheet["COLS"].values()]
 
-            duplicate_targets = [
-                col for col in set(target_names) if target_names.count(col) > 1
-            ]
+            duplicate_targets = [col for col in set(target_names) if target_names.count(col) > 1]
 
             if duplicate_targets:
                 raise ValueError(
@@ -171,7 +169,8 @@ def get_sheet_values_with_retry(worksheet, max_attempts=3, base_sleep=5, max_sle
 
             if attempt == max_attempts:
                 logger.exception(
-                    f"ERROR - Google Sheets API error after max retries. status_code={status_code} attempts={attempt}"
+                    "ERROR - Google Sheets API error after max retries. "
+                    f"status_code={status_code} attempts={attempt}"
                 )
                 raise
 
@@ -179,7 +178,8 @@ def get_sheet_values_with_retry(worksheet, max_attempts=3, base_sleep=5, max_sle
             sleep_seconds += random.uniform(0, 2)
 
             logger.warning(
-                f"Transient Google Sheets API error. status_code={status_code} attempt={attempt}/{max_attempts}"
+                "Transient Google Sheets API error. "
+                f"status_code={status_code} attempt={attempt}/{max_attempts}"
             )
             logger.warning(f"Sleeping {sleep_seconds} seconds before retry")
             time.sleep(sleep_seconds)
@@ -198,9 +198,7 @@ def sheet_values_to_dataframe(header, column, values):
     logger.info("Cleaning up Data")
     # Check if header is greater than the rows we have
     if header >= len(values):
-        logger.error(
-            "ERROR - no data in GSheet beyond headers (or header value is wrong)"
-        )
+        logger.error("ERROR - no data in GSheet beyond headers (or header value is wrong)")
         raise ValueError("No data found beyond header row; check HEADER_ROW config")
 
     # Slice rows down to where the header is
@@ -263,9 +261,7 @@ def parse_numeric_series(num, num_type):
         cleaned = cleaned.str.replace(re.escape(char), "", regex=True)
 
     negative_mask = (
-        cleaned.str.contains(
-            r"^\(.*\)$", regex=True, na=False
-        )  # whole value in parentheses
+        cleaned.str.contains(r"^\(.*\)$", regex=True, na=False)  # whole value in parentheses
         | cleaned.str.contains(r"^-", regex=True, na=False)  # starts with minus
         | cleaned.str.contains(r"-$", regex=True, na=False)  # ends with minus
     )
@@ -301,15 +297,11 @@ def align_to_target_schema(df, rules):
 
     logger.info("Checking for optional Columns")
     optional_source_cols = [
-        source_col
-        for source_col, config in rules.items()
-        if config.get("REQUIRED", True) is False
+        source_col for source_col, config in rules.items() if config.get("REQUIRED", True) is False
     ]
 
     missing_required = [
-        source_col
-        for source_col in required_source_cols
-        if source_col not in df.columns
+        source_col for source_col in required_source_cols if source_col not in df.columns
     ]
 
     if missing_required:
@@ -340,7 +332,7 @@ def align_to_target_schema(df, rules):
 
     # Convert types
     logger.info("Converting Column Types")
-    for old_col, config in rules.items():
+    for config in rules.items():
         new_col = config["NAME"]
         col_type = config["TYPE"]
 
@@ -353,9 +345,7 @@ def align_to_target_schema(df, rules):
         elif col_type == "VARCHAR":
             df[new_col] = df[new_col].astype("string").fillna("")
         else:
-            raise ValueError(
-                f"ERROR - Unsupported column type for {new_col}: {col_type}"
-            )
+            raise ValueError(f"ERROR - Unsupported column type for {new_col}: {col_type}")
     return df
 
 
@@ -414,9 +404,7 @@ def connect_sf(sec, rules):
 
 def build_sheet_dataframe(client, sheet_config):
     logger.info("Opening Google Sheet")
-    worksheet = client.open_by_url(sheet_config["LINK"]).worksheet(
-        sheet_config["SHEET"]
-    )
+    worksheet = client.open_by_url(sheet_config["LINK"]).worksheet(sheet_config["SHEET"])
 
     values = get_sheet_values_with_retry(worksheet)
 
@@ -435,10 +423,7 @@ def build_sheet_dataframe(client, sheet_config):
 
 
 def build_table_dataframe(client, table_config):
-    dfs = [
-        build_sheet_dataframe(client, sheet_config)
-        for sheet_config in table_config["SHEETS"]
-    ]
+    dfs = [build_sheet_dataframe(client, sheet_config) for sheet_config in table_config["SHEETS"]]
 
     logger.info("Creating combined table DataFrame")
 
@@ -499,8 +484,7 @@ def load_table_via_staging(conn, df, table_name, table_config):
 
         logger.info(f"Inserting into {table_name} from {stage_name}")
         cursor.execute(
-            f"INSERT INTO {target} ({cols_order}) "
-            f"SELECT {cols_order} FROM {staging}"
+            f"INSERT INTO {target} ({cols_order}) " f"SELECT {cols_order} FROM {staging}"
         )
 
         logger.info("Committing Snowflake transaction")
